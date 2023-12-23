@@ -41,7 +41,7 @@ class MainActivity : AppCompatActivity() {
     private fun checkPolidrome() {
         val input = binding.edSentence.text.toString()
         if (!input.isNullOrEmpty()){
-            val cleanString = input.replace("\\s+".toRegex(), "").toLowerCase()
+            val cleanString = input.replace("\\s+".toRegex(), "").lowercase()
             if (cleanString == cleanString.reversed()) showDialog("isPalindrome") else showDialog("not palindrome")
         } else{
             showDialog("Please input the TextField first")
